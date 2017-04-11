@@ -4,7 +4,9 @@
   "description": "React全家桶造轮子\r #### 根据如下博文造轮子\r http://blog.csdn.net/awaw00",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cd server && json-server db.json -w -p 3000",
+    "dev": "roadhog server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/jer0701/React-bucket/issues"
   },
-  "homepage": "https://github.com/jer0701/React-bucket#readme"
+  "homepage": "https://github.com/jer0701/React-bucket#readme",
+  "dependencies": {
+    "react": "^15.5.3",
+    "react-dom": "^15.5.3",
+    "react-router": "^4.0.0"
+  }
 }
