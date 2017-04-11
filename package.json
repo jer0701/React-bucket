@@ -1,0 +1,19 @@
+{
+  "name": "yy",
+  "version": "1.0.0",
+  "description": "React全家桶造轮子\r #### 根据如下博文造轮子\r http://blog.csdn.net/awaw00",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jer0701/React-bucket.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jer0701/React-bucket/issues"
+  },
+  "homepage": "https://github.com/jer0701/React-bucket#readme"
+}
