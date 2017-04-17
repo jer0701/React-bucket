@@ -24,7 +24,35 @@ class UserAdd extends React.Component {
     handleSubmit(e) {
         //阻止表单submit时间自动跳转页面的动作
         e.preventDefault();
-        alert(JSON.stringify(this.state));
+        //alert(JSON.stringify(this.state));
+
+        const {name, age, gender} = this.state;
+        fetch("http://localhost:3000/user", {
+            method: "post",
+            //使用fetch提交的json数据需要使用JSON.stringify转换成字符串
+            body: JSON.stringify({
+                name,
+                age,
+                gender
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then( (res) => res.json() )
+          .then( (res) => {
+            //当添加成功时，返回的json对象中应包含一个有效的id字段
+            //所以可以使用res.id来判断是否添加成功
+            if(res.id) {
+                alert("添加用户成功");
+                this.setState({
+                    name: "",
+                    age: 0,
+                    gender: ""
+                });
+            } else {
+                alert("添加失败");
+            }
+          }).catch( (err) => console.error(err) );
     }
 
     render() {
