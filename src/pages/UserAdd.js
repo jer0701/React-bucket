@@ -1,6 +1,6 @@
 import React from 'react';
-import formProvider form "../utils/formProvider";
-import FormItem form "../components/FormItem";
+import formProvider from "../utils/formProvider";
+import FormItem from "../components/FormItem";
 
 class UserAdd extends React.Component {
     /*constructor() {
@@ -118,8 +118,9 @@ class UserAdd extends React.Component {
                                 <input type="text" value={name.value} onChange={(e) => onFormChange("name", e.target.value)}/>
                             </FormItem>
 
-                            <FormItem label="年龄：" valid={age.valid} error={age.error}>
+                            <FormItem label="年龄：" valid={age.valid} error={age.error} >
                                 <input type="number" value={age.value || ""} onChange={(e) => onFormChange("age", e.target.value)}/>
+                            </FormItem>
 
                             <FormItem label="性别：" valid={gender.valid} error={gender.error}>
                                 <select value={gender.value} onChange={(e) => onFormChange("gender", e.target.value)}>
