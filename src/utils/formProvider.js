@@ -2,11 +2,12 @@ import React from "react";
 
 function formProvider(fields) {
     return function(Comp) {
-        const initFormState = {};
+
+        const initialFormState = {};
         for (const key in fields) {
-            initFormState[key] = {
+            initialFormState[key] = {
                 value: fields[key].defaultValue,
-                error: ""
+                error: ''
             };
         }
 
@@ -14,8 +15,8 @@ function formProvider(fields) {
             constructor (props) {
                 super(props);
                 this.state = {
-                    form: initFormState,
-                    formValid: false //用来保存整个表单的验证状态
+                    form: initialFormState,
+                    formValid: false
                 };
 
                 this.handleValueChange = this.handleValueChange.bind(this);
@@ -23,10 +24,10 @@ function formProvider(fields) {
 
             handleValueChange (fieldName, value) {
                 const { form } = this.state;
-                const newFieldState = {value, valid: true, error: ""};
+                const newFieldState = {value, valid: true, error: ''};
                 const fieldRules = fields[fieldName].rules;
 
-                for (let i = 0; i < fieldRules.lenght; i++) {
+                for (let i = 0; i < fieldRules.length; i++) {
                     const {pattern, error} = fieldRules[i];
                     let valid = false;
                     if (typeof pattern === "function") {
@@ -52,7 +53,7 @@ function formProvider(fields) {
             }
 
             render () {
-                const {form, formValid } = this.state;
+                const {form, formValid} = this.state;
                 return <Comp {...this.props} form={form} formValid={formValid} onFormChange={this.handleValueChange} />
             }
         }
