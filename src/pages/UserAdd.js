@@ -138,6 +138,13 @@ class UserAdd extends React.Component {
     }
 }
 
+//以下这句话如果放在formProvider方法后面就会不生效
+// 必须给UserAdd定义一个包含router属性的contextTypes
+// 使得组件中可以通过this.context.router来使用React Router提供的方法
+UserAdd.contextTypes = {
+  router: React.PropTypes.object.isRequired
+};
+
 UserAdd = formProvider({
   name: {
     defaultValue: '',
@@ -177,11 +184,5 @@ UserAdd = formProvider({
     ]
   }
 })(UserAdd);
-
-// 必须给UserAdd定义一个包含router属性的contextTypes
-// 使得组件中可以通过this.context.router来使用React Router提供的方法
-UserAdd.contextTypes = {
-  router: React.PropTypes.object.isRequired
-};
 
 export default UserAdd;
