@@ -1,4 +1,5 @@
 import React from "react";
+import HomeLayout from '../layouts/HomeLayout';
 
 class UserList extends React.Component {
     constructor (props) {
@@ -22,11 +23,7 @@ class UserList extends React.Component {
         const {userList} = this.state;
 
         return (
-            <div>
-                <header>
-                    <h1>用户列表</h1>
-                </header>
-                <main>
+            <HomeLayout title="用户列表">
                     <table>
                         <thead>
                             <tr>
@@ -51,8 +48,7 @@ class UserList extends React.Component {
                             }
                         </tbody>
                     </table>
-                </main>
-            </div>
+            </HomeLayout>
             );
     }
 }
