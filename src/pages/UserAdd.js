@@ -2,6 +2,7 @@ import React from 'react';
 import formProvider from "../utils/formProvider";
 import FormItem from "../components/FormItem";
 import HomeLayout from '../layouts/HomeLayout';
+import UserEditor from '../components/UserEditor';
 
 class UserAdd extends React.Component {
     /*constructor() {
@@ -110,25 +111,7 @@ class UserAdd extends React.Component {
     render() {
         const {form: {name, age, gender}, onFormChange} = this.props;
         return (<HomeLayout title="添加用户">
-                        <form onSubmit={(e) => this.handleSubmit(e)}>
-                            <FormItem label="用户名：" valid={name.valid} error={name.error} >
-                                <input type="text" value={name.value} onChange={(e) => onFormChange("name", e.target.value)}/>
-                            </FormItem>
-
-                            <FormItem label="年龄：" valid={age.valid} error={age.error} >
-                                <input type="number" value={age.value || ""} onChange={(e) => onFormChange("age", e.target.value)}/>
-                            </FormItem>
-
-                            <FormItem label="性别：" valid={gender.valid} error={gender.error}>
-                                <select value={gender.value} onChange={(e) => onFormChange("gender", e.target.value)}>
-                                    <option value="">请选择</option>
-                                    <option value="male">男</option>
-                                    <option value="female">女</option>
-                                </select>
-                            </FormItem>
-                            <br/>
-                            <input type="submit" value="提交" />
-                        </form>
+                    <UserEditor />
                 </HomeLayout>);
     }
 }
@@ -136,7 +119,7 @@ class UserAdd extends React.Component {
 //以下这句话如果放在formProvider方法后面就会不生效
 // 必须给UserAdd定义一个包含router属性的contextTypes
 // 使得组件中可以通过this.context.router来使用React Router提供的方法
-UserAdd.contextTypes = {
+/*UserAdd.contextTypes = {
   router: React.PropTypes.object.isRequired
 };
 
@@ -179,5 +162,5 @@ UserAdd = formProvider({
     ]
   }
 })(UserAdd);
-
+*/
 export default UserAdd;
