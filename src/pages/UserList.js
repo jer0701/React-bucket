@@ -9,6 +9,10 @@ class UserList extends React.Component {
         };
     }
 
+    handleEdit (user) {
+        this.context.router.push('/user/edit/' + user.id);
+    }
+
     handleDel (user) {
         const confirmed = confirm(`确定要删除用户${user.name}吗？`);//模板字符串中嵌入变量，需要将变量名写在${}之中。
 
@@ -76,5 +80,9 @@ class UserList extends React.Component {
             );
     }
 }
+
+UserList.contextTypes = {
+  router: React.PropTypes.object.isRequired
+};
 
 export default UserList;
