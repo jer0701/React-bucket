@@ -2,7 +2,7 @@
   "user": [
     {
       "name": "yz",
-      "age": "24",
+      "age": "23",
       "gender": "male",
       "id": 1000
     },
@@ -13,9 +13,9 @@
       "gender": "female"
     },
     {
-      "name": "www",
-      "age": 2222,
-      "gender": "female",
+      "name": "a",
+      "age": "1",
+      "gender": "male",
       "id": 1002
     }
   ],
