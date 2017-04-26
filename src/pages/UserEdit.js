@@ -14,7 +14,7 @@ class UserEdit extends React.Component {
     componentWillMount () {
         const userId = this.context.router.params.id;
         get("http://localhost:3000/user/" + userId)
-            .then(res => res.json())
+            //.then(res => res.json())
             .then(res => {
                 this.setState({
                     user: res

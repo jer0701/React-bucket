@@ -19,7 +19,7 @@ class UserList extends React.Component {
 
         if( confirmed ) {
             del("http://localhost:3000/user/" + user.id)
-              .then(res => res.json())
+              //.then(res => res.json())
               .then(res => {
                 this.setState({
                     userList: this.state.userList.filter(item => item.id !== user.id)
@@ -34,7 +34,6 @@ class UserList extends React.Component {
     }
     componentWillMount() {
         get("http://localhost:3000/user")
-            .then(res => res.json())
             .then(res => {
                 this.setState({
                     userList: res

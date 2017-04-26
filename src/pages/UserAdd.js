@@ -1,6 +1,4 @@
 import React from 'react';
-import formProvider from "../utils/formProvider";
-import FormItem from "../components/FormItem";
 import HomeLayout from '../layouts/HomeLayout';
 import UserEditor from '../components/UserEditor';
 
@@ -109,7 +107,6 @@ class UserAdd extends React.Component {
     }*/
 
     render() {
-        const {form: {name, age, gender}, onFormChange} = this.props;
         return (<HomeLayout title="添加用户">
                     <UserEditor />
                 </HomeLayout>);
