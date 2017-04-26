@@ -21,7 +21,7 @@ class UserEditor extends React.Component {
 
         if (editTarget) {
             editType = "编辑";
-            apiUrl += "" + editTarget.id;
+            apiUrl += "/" + editTarget.id;
             method = "put";
         }
         fetch(apiUrl, {
