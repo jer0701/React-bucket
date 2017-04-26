@@ -73,7 +73,7 @@ class UserAdd extends React.Component {
         });
     }*/
 
-    handleSubmit(e) {
+    /*handleSubmit(e) {
         //阻止表单submit时间自动跳转页面的动作
         e.preventDefault();
         //alert(JSON.stringify(this.state));
@@ -106,7 +106,7 @@ class UserAdd extends React.Component {
                 alert("添加失败");
             }
           }).catch( (err) => console.error(err) );
-    }
+    }*/
 
     render() {
         const {form: {name, age, gender}, onFormChange} = this.props;

@@ -1,6 +1,7 @@
 import React from 'react';
 import formProvider from "../utils/formProvider";
 import FormItem from "../components/FormItem";
+import request from '../utils/request';
 
 class UserEditor extends React.Component {
 
@@ -24,17 +25,12 @@ class UserEditor extends React.Component {
             apiUrl += "/" + editTarget.id;
             method = "put";
         }
-        fetch(apiUrl, {
-            method,
+        request(method,apiUrl, {
             //使用fetch提交的json数据需要使用JSON.stringify转换成字符串
-            body: JSON.stringify({
                 name: name.value,
                 age: age.value,
                 gender: gender.value
-            }),
-            headers: {
-                "Content-Type": "application/json"
-            }
+
         }).then( (res) => res.json() )
           .then( (res) => {
             //当添加成功时，返回的json对象中应包含一个有效的id字段
