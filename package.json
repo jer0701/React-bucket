@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "cd server && json-server db.json -w -p 3000",
+    "server": "node server/index.js",
     "dev": "roadhog server"
   },
   "repository": {
@@ -22,5 +22,8 @@
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
     "react-router": "^3.0.0"
+  },
+  "devDependencies": {
+    "json-server": "^0.9.6"
   }
 }
