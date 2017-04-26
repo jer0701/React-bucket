@@ -1,30 +1,36 @@
 {
-    "user": [
-	   {
-          "id": 1000,
-          "name": "yz",
-          "age": 23,
-          "gender": "male"
-	   },
-       {
-          "id": 1001,
-          "name": "fq",
-          "age": 23,
-          "gender": "female"
-       }
-    ],
-    "book": [
-        {
-            "id": 1000,
-            "name": "JavaScript从入门到放弃",
-            "price": 999,
-            "owner_id": 1000
-        },
-        {
-            "id": 1001,
-            "name": "UI从入门到放弃",
-            "price": 998,
-            "owner_id": 1001
-        }
-    ]
+  "user": [
+    {
+      "name": "yz",
+      "age": "24",
+      "gender": "male",
+      "id": 1000
+    },
+    {
+      "id": 1001,
+      "name": "fq",
+      "age": 23,
+      "gender": "female"
+    },
+    {
+      "name": "www",
+      "age": 2222,
+      "gender": "female",
+      "id": 1002
+    }
+  ],
+  "book": [
+    {
+      "id": 1000,
+      "name": "JavaScript从入门到放弃",
+      "price": 999,
+      "owner_id": 1000
+    },
+    {
+      "id": 1001,
+      "name": "UI从入门到放弃",
+      "price": 998,
+      "owner_id": 1001
+    }
+  ]
 }
